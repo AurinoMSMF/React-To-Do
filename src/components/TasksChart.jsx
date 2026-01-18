@@ -1,8 +1,10 @@
+import { Chart } from "chart.js";
 import { useState } from "react";
 
 function TasksChart({ onAddNewTask }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  //   const ctx = document.getElementById("myChart");
 
   return (
     <div className="h-fit p-6 space-y-2 bg-slate-100 rounded-lg shadow flex flex-col gap-4">
@@ -35,6 +37,31 @@ function TasksChart({ onAddNewTask }) {
       >
         Add
       </button>
+      {/* <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      {
+        new Chart(document.getElementById("myChart"), {
+          type: "bar",
+          data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [
+              {
+                label: "# of Votes",
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        })
+      }*/}
     </div>
   );
 }

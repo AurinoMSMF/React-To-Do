@@ -49,11 +49,11 @@ function App() {
   }, [tasks]);
 
   return (
-    <div className="w-screen h-screen bg-green-300 grid grid-cols-2 grid-flow-col justify-items-center p-6 gap-4">
-      <div className="w-[28rem] h-auto text-center text-2xl rounded-md flex flex-col gap-6">
+    <div className="w-full h-screen bg-green-300 grid sm:grid-cols-1 md:grid-cols-2 mx-auto justify-items-center p-6 gap-4">
+      <div className="w-full max-w-[28rem] h-auto text-center text-2xl rounded-md flex flex-col gap-6">
         <TasksChart tasks={tasks} />
       </div>
-      <div className="w-[28rem] h-auto text-center text-2xl rounded-md flex flex-col gap-6">
+      <div className="w-full max-w-[28rem] h-auto text-center text-2xl rounded-md flex flex-col gap-6">
         <AddTask onAddNewTask={onAddNewTask} />
         <Tasks
           tasks={tasks}
