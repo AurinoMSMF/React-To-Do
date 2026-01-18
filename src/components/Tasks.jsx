@@ -14,7 +14,7 @@ function Tasks({ tasks, onTaskClick, onDeleteTask }) {
     navigate(`/task-details?${queryParams.toString()}`);
   };
   console.log(tasks);
-  if (tasks.length == 0) {
+  if (tasks === null || tasks?.length == 0) {
     return;
   }
 

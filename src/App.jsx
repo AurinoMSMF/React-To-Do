@@ -42,7 +42,7 @@ function App() {
   };
 
   useEffect(() => {
-    if (tasks.length === 0) {
+    if (tasks === null || tasks?.length == 0) {
       return localStorage.setItem("tasks", JSON.stringify(""));
     }
     localStorage.setItem("tasks", JSON.stringify(tasks));
