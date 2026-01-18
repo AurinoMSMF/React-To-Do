@@ -1,4 +1,4 @@
-import { InfoIcon, TrashIcon } from "lucide-react";
+import { CheckIcon, InfoIcon, TrashIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import TaskButton from "./TaskButton";
 
@@ -30,6 +30,7 @@ function Tasks({ tasks, onTaskClick, onDeleteTask }) {
                   task.isComplete && "line-through"
                 }`}
               >
+                {task.isComplete && <CheckIcon />}
                 {task.title}
               </button>
               <TaskButton
