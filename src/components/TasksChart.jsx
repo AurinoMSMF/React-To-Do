@@ -9,7 +9,7 @@ function TasksChart({ onAddNewTask }) {
   return (
     <div className="h-fit p-6 space-y-2 bg-slate-100 rounded-lg shadow flex flex-col gap-4">
       <h1>Tasks Chart</h1>
-      <input
+      {/* <input
         className="rounded-md border border-green-200 outline-green-600 px-4 py-2"
         name="title"
         type="text"
@@ -36,7 +36,7 @@ function TasksChart({ onAddNewTask }) {
         className="rounded-md bg-green-400 text-white px-4 py-2 text-medium"
       >
         Add
-      </button>
+      </button> */}
       {/* <div>
         <canvas id="myChart"></canvas>
       </div>
