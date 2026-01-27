@@ -21,7 +21,7 @@ function TaskDetailPage() {
           {title}
         </div>
         <div
-          className="h-20 w-[100%] overflow-y-auto text-xl rounded-md border bg-white  border-green-200 outline-red-600 px-4 py-2"
+          className="h-20 w-[100%] overflow-y-auto break-words text-xl rounded-md border bg-white  border-green-200 outline-red-600 px-4 py-2"
           name="description"
           placeholder="Insert the description of the task"
         >

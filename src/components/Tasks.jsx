@@ -19,7 +19,7 @@ function Tasks({ tasks, onTaskClick, onDeleteTask }) {
   }
 
   return (
-    <ul className="h-fit p-6 space-y-2 bg-slate-100 rounded-lg shadow">
+    <ul className="h-96 p-6 overflow-y-auto scrollbar-thin space-y-2 bg-slate-100 rounded-lg shadow">
       {tasks.map((task) => {
         if (task !== "") {
           return (
