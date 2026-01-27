@@ -71,6 +71,8 @@ function App() {
         if (dayObject.date === todaysDate) {
           return todaysTasksObject;
         }
+
+        return dayObject;
       }),
     );
   };
@@ -86,6 +88,7 @@ function App() {
 
     setTodaysTasks(updatedTasks);
 
+    console.log(updatedTasks);
     updateAllTasksObjects(updatedTasks);
   };
 

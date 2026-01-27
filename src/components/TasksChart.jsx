@@ -26,7 +26,9 @@ function TasksChart({ currentAllTasksObjects }) {
   console.log(allDaysTasksObjects);
   const arrayPercentageOfCompletedTasksPerDay = allDaysTasksObjects.map(
     (dayObject) => {
+      console.log(dayObject);
       if (countDays <= 6) {
+        countDays++;
         const tasksTotal = dayObject.tasks.length;
         const completedTasks = dayObject.tasks.filter(
           (task) => task.isComplete,
