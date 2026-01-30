@@ -26,7 +26,11 @@ function Tasks({ tasks, onTaskClick, onDeleteTask }) {
       {tasks.map((task) => {
         if (task !== "") {
           return (
-            <li data-test="task-item" key={task.id} className="flex gap-2">
+            <li
+              data-test="task-item"
+              key={task.id}
+              className="task-item flex gap-2"
+            >
               <button
                 data-test="task-title-button"
                 onClick={() => onTaskClick(task.id)}
