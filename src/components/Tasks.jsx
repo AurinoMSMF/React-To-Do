@@ -13,17 +13,20 @@ function Tasks({ tasks, onTaskClick, onDeleteTask }) {
 
     navigate(`/task-details?${queryParams.toString()}`);
   };
-  console.log(tasks);
+
   if (tasks === null || tasks?.length == 0) {
     return;
   }
 
   return (
-    <ul className="h-96 p-6 overflow-y-auto scrollbar-thin space-y-2 bg-slate-100 rounded-lg shadow">
+    <ul
+      data-test="tasks-list"
+      className="tasks-list h-96 p-6 overflow-y-auto scrollbar-thin space-y-2 bg-slate-100 rounded-lg shadow"
+    >
       {tasks.map((task) => {
         if (task !== "") {
           return (
-            <li key={task.id} className="flex gap-2">
+            <li data-test="task-item" key={task.id} className="flex gap-2">
               <button
                 onClick={() => onTaskClick(task.id)}
                 className={`w-full text-white text-left text-2xl flex items-center flex-row gap-3 p-2 rounded-md bg-green-400 ${

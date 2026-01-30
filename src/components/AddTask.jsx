@@ -7,7 +7,10 @@ function AddTask({ onAddNewTask }) {
   const [description, setDescription] = useState("");
 
   return (
-    <div className="h-fit p-6 space-y-2 bg-slate-100 rounded-lg shadow flex flex-col gap-4">
+    <div
+      data-test="task-creation-container"
+      className="task-creation-container h-fit p-6 space-y-2 bg-slate-100 rounded-lg shadow flex flex-col gap-4"
+    >
       <h1>Add Task</h1>
       <TaskInput
         name="title"
@@ -26,6 +29,7 @@ function AddTask({ onAddNewTask }) {
         onInput={(event) => setDescription(event.target.value)}
       />
       <button
+        data-test="task-creation-button"
         onClick={() => {
           if (!title.trim() || !description.trim()) {
             return alert("Insert the task title and description");
@@ -34,7 +38,7 @@ function AddTask({ onAddNewTask }) {
           setTitle("");
           setDescription("");
         }}
-        className="rounded-md bg-green-400 text-white px-4 py-2 text-medium"
+        className="task-creation-button rounded-md bg-green-400 text-white px-4 py-2 text-medium"
       >
         Add
       </button>

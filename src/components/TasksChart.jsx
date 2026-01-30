@@ -77,10 +77,13 @@ function TasksChart({ currentAllTasksObjects }) {
   }, [lastSixDates, arrayPercentageOfCompletedTasksPerDay]);
 
   return (
-    <div className="h-fit p-6 space-y-2 bg-slate-100 rounded-lg shadow flex flex-col gap-4">
+    <div
+      data-test="tasks-chart-container"
+      className="h-fit p-6 space-y-2 bg-slate-100 rounded-lg shadow flex flex-col gap-4"
+    >
       <h1>Tasks Chart</h1>
       <div>
-        <canvas ref={canvasRef}></canvas>
+        <canvas data-test="tasks-chart-canva" ref={canvasRef}></canvas>
       </div>
     </div>
   );
