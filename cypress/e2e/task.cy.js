@@ -28,6 +28,8 @@ const createTaskAsPrecondition = () => {
 describe("Criação de tarefa", () => {
   beforeEach(() => {
     // Arrange
+    cy.log(Cypress.config("baseUrl"));
+    console.log(Cypress.config("baseUrl"));
     cy.visit("/");
   });
 
@@ -48,6 +50,8 @@ describe("Criação de tarefa", () => {
 describe("Com tarefa existente", () => {
   beforeEach(() => {
     // Arrange
+    cy.log(Cypress.config("baseUrl"));
+    console.log(Cypress.config("baseUrl"));
     cy.visit("/");
     createTaskAsPrecondition();
   });
