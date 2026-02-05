@@ -7,7 +7,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 export default [
   { ignores: ["dist"] },
   {
-    files: ["**/*.{js,jsx}"],
+    files: ["**/*.cy.{js,jsx}", "**/*.{js,jsx}"],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -19,9 +19,17 @@ export default [
     },
     settings: { react: { version: "18.3" } },
     plugins: {
+      cypress,
       react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
+    },
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.mocha,
+        ...cypress.environments.globals.globals,
+      },
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -34,6 +42,8 @@ export default [
         { allowConstantExport: true },
       ],
       "react/prop-types": "off",
+      ...cypress.configs.recommended.rules,
+      "no-unused-expressions": "off",
     },
   },
 ];
