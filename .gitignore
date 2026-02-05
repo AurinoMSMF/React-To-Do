@@ -28,4 +28,4 @@ dist-ssr
 
 # Cypress evidences directories
 
-cypress/screenshots/*
+cypress/screenshots

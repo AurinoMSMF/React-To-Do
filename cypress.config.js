@@ -1,10 +1,11 @@
 import { defineConfig } from "cypress";
-const dotenv = require("dotenv");
-const path = require("path");
 
-dotenv.config({
-  path: path.resolve(__dirname, "./.env"),
-});
+if (process.env.NODE_ENV !== "production") {
+  const dotenv = require("dotenv");
+  const path = require("path");
+
+  dotenv.config({ path: path.resolve(__dirname, "./.env") });
+}
 
 export default defineConfig({
   allowCypressEnv: false,
