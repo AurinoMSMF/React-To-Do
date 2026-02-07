@@ -21,7 +21,7 @@ function Tasks({ tasks, onTaskClick, onDeleteTask }) {
   return (
     <ul
       data-test="tasks-list"
-      className="tasks-list h-96 p-6 overflow-y-auto scrollbar-thin space-y-2 bg-slate-100 rounded-lg shadow"
+      className="tasks-list max-h-96 p-6 overflow-y-auto scrollbar-thin space-y-2 bg-slate-100 rounded-lg shadow"
     >
       {tasks.map((task) => {
         if (task !== "") {

@@ -81,7 +81,8 @@ function TasksChart({ currentAllTasksObjects }) {
       data-test="tasks-chart-container"
       className="h-fit p-6 space-y-2 bg-slate-100 rounded-lg shadow flex flex-col gap-4"
     >
-      <h1>Tasks Chart</h1>
+      <h1 className="text-2xl">Tasks Chart</h1>
+      <h5>See your perfomance over the last 7 days</h5>
       <div>
         <canvas data-test="tasks-chart-canva" ref={canvasRef}></canvas>
       </div>

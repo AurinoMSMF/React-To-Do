@@ -148,17 +148,18 @@ function App() {
   }, [currentAllTasksObjects]);
 
   return (
-    <div className="w-full h-screen bg-green-300 grid sm:grid-cols-1 md:grid-cols-2 mx-auto justify-items-center p-6 gap-4">
-      <div className="w-full max-w-[28rem] h-auto text-center text-2xl rounded-md flex flex-col gap-6">
-        <TasksChart currentAllTasksObjects={currentAllTasksObjects} />
-      </div>
-      <div className="w-full max-w-[28rem] h-auto text-center text-2xl rounded-md flex flex-col gap-6">
+    <div className="min-w-full min-h-screen bg-green-500 grid sm:grid-cols-1 md:grid-cols-2 mx-auto justify-items-center p-6 gap-4">
+      <div className="w-full max-w-[26rem] h-auto text-center text-2xl rounded-md flex flex-col gap-6">
         <AddTask onAddNewTask={onAddNewTask} />
         <Tasks
           tasks={currentTodaysTasks}
           onTaskClick={onTaskClick}
           onDeleteTask={onDeleteTask}
         />
+      </div>
+      {/* <div className="w-full min-w-[28rem] h-auto text-center justify-center rounded-md flex flex-col gap-6"> */}
+      <div className="w-full min-w-[26rem] h-auto text-center rounded-md flex flex-col gap-6">
+        <TasksChart currentAllTasksObjects={currentAllTasksObjects} />
       </div>
     </div>
   );
